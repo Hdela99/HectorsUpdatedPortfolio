@@ -24,22 +24,22 @@ export default function PortfolioContainer() {
             console.log(currentPage);
             return <Resume />
         }
-        else if (currentPage === 'AboutMe') {
+        if (currentPage === 'AboutMe') {
             console.log(currentPage);
             return <AboutMe />
         }
-        else if (currentPage === 'ContactMe') {
+        if (currentPage === 'ContactMe') {
             console.log(currentPage);
             return <ContactMe />
         }
-        else if (currentPage === 'Projects') {
+        if (currentPage === 'Projects') {
             console.log(currentPage);
 
             return <Projects />
-        } else {
-            console.log(currentPage);
-            return <Home />;
         }
+        console.log(currentPage);
+        return <Home />;
+
     };
 
 
@@ -64,9 +64,10 @@ export default function PortfolioContainer() {
                         </HStack>
                     </Center>
 
-                    <Container>
+                    {/* <Container>
                         {renderPage()}
-                    </Container>
+                    </Container> */}
+                    {renderPage()}
                 </Stack>
             </Flex>
         </>

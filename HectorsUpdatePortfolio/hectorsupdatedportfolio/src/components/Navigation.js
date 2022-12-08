@@ -1,5 +1,10 @@
 import React from "react";
 import { Flex, Spacer, Tabs, Tab, TabList, Link } from "@chakra-ui/react";
+import Resume from './pages/Resume';
+import AboutMe from './pages/AboutMe';
+import ContactMe from './pages/ContactMe';
+import Projects from './pages/Projects'
+import Home from './pages/Home';
 
 function Navigation({ currentPage, handlePageChange }) {
 
@@ -16,35 +21,34 @@ function Navigation({ currentPage, handlePageChange }) {
                 <Tabs variant='solid-rounded'>
                     <TabList>
                         <Tab
-                            as='a'
-                            href='/'
                             onClick={() => handlePageChange('Home')}
                             _selected={currentPage === 'Home' ? { bg: 'white', color: 'black', variant: 'solid-rounded' } : { bg: 'gray', color: 'white', variant: 'solid-rounded' }}
                         >
-                            Home</Tab>
+                            <Link to='Home' elemet={<Home />}>Home</Link>
+                        </Tab>
                         <Tab
-                            as='a'
-                            href='/AboutMe'
                             onClick={() => handlePageChange('AboutMe')}
                             _selected={currentPage === 'AboutMe' ? { bg: 'white', color: 'black', variant: 'solid-rounded' } : { bg: 'gray', color: 'white', variant: 'solid-rounded' }}
                         >
-                            About Me</Tab>
+                            <Link to='AboutMe' elemet={<AboutMe />}>About Me</Link>
+                        </Tab>
                         <Tab
-                            as='a'
-                            href='/Projects'
                             onClick={() => handlePageChange('Projects')}
                             _selected={currentPage === 'Projects' ? { bg: 'white', color: 'black', variant: 'solid-rounded' } : { bg: 'gray', color: 'white', variant: 'solid-rounded' }}
-                        >Projects</Tab>
+                        >
+                            <Link to='Projects' elemet={<Projects />}>Projects</Link>
+
+                        </Tab>
                         <Tab
-                            as='a'
-                            href='/ContactMe'
                             onClick={() => handlePageChange('ContactMe')}
-                            _selected={currentPage === 'ContactMe' ? { bg: 'white', color: 'black', variant: 'solid-rounded' } : { bg: 'gray', color: 'white', variant: 'solid-rounded' }}>Contact Me</Tab>
+                            _selected={currentPage === 'ContactMe' ? { bg: 'white', color: 'black', variant: 'solid-rounded' } : { bg: 'gray', color: 'white', variant: 'solid-rounded' }}>
+                            <Link to='ContactMe' elemet={<ContactMe />}>ContactMe</Link>
+                        </Tab>
                         <Tab
-                            as='a'
-                            href='/Resume'
                             onClick={() => handlePageChange('Resume')}
-                            _selected={currentPage === 'Resume' ? { bg: 'white', color: 'black', variant: 'solid-rounded' } : { bg: 'gray', color: 'white', variant: 'solid-rounded' }}>Resume</Tab>
+                            _selected={currentPage === 'Resume' ? { bg: 'white', color: 'black', variant: 'solid-rounded' } : { bg: 'gray', color: 'white', variant: 'solid-rounded' }}>
+                            <Link to='Resume' elemet={<Resume />}>Resume</Link>
+                        </Tab>
                     </TabList>
                 </Tabs>
 

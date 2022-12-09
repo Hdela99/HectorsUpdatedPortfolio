@@ -10,7 +10,7 @@ import Header from './Header';
 
 
 export default function PortfolioContainer() {
-    const [currentPage, setCurrentPage] = useState('Resume');
+    const [currentPage, setCurrentPage] = useState('Home');
 
     const handlePageChange = (page) => {
         console.log(page);

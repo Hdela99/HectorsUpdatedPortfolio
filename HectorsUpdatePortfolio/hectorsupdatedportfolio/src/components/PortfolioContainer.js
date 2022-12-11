@@ -7,7 +7,7 @@ import Projects from './pages/Projects';
 import Navigation from "./Navigation";
 import Home from './pages/Home'
 import Header from './Header';
-
+import Footer from '../components/Footer';
 
 export default function PortfolioContainer() {
     const [currentPage, setCurrentPage] = useState('Home');
@@ -63,11 +63,9 @@ export default function PortfolioContainer() {
 
                         </HStack>
                     </Center>
-
-                    {/* <Container>
-                        {renderPage()}
-                    </Container> */}
                     {renderPage()}
+                    <Footer />
+
                 </Stack>
             </Flex>
         </>

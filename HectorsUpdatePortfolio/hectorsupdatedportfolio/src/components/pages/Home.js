@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, Center, Flex, Container, Box, Text, Heading, Stack, Spacer } from '@chakra-ui/react'
+import { Image, Center, Flex, Card, CardBody, Text, Heading, Stack, Spacer } from '@chakra-ui/react'
 import selfie from '../../Images/Selfie.PNG';
 
 export default function Home() {
@@ -16,15 +16,18 @@ export default function Home() {
                     px='3rem'
                     py='1rem'
                 >
-                    <Text fontSize='1.5rem' fontStyle='center'> I am a full stack developer who is passionate in building functional applications with amazing user experience and refactoring older code because there is always something new to learn. </Text>
+                    <Text align='center' fontSize='1.5rem' fontStyle='center'> I am a full stack developer who is passionate in building functional applications with amazing user experience and refactoring older code because there is always something new to learn. </Text>
                 </Center>
                 <Center>
-                    <Box boxSize='sm' >
-                        <Image
-                            borderRadius='80'
-                            shadow='xl'
-                            src={selfie} alt='Hector De La Cruz' />
-                    </Box>
+                    <Card border='none' borderRadius='50' >
+                        <CardBody borderRadius="50" boxSize='sm' bg='slateGray' >
+                            <Image
+                                borderRadius='80'
+                                shadow='xl'
+                                src={selfie} alt='Hector De La Cruz' />
+                            <Text align='center' fontSize='1.5rem'>That's me</Text>
+                        </CardBody>
+                    </Card>
                 </Center>
 
             </Stack>

@@ -3,7 +3,7 @@ import { Stack, Flex, Center, Heading, HStack, Container } from "@chakra-ui/reac
 import Resume from './pages/Resume';
 import AboutMe from './pages/AboutMe';
 import ContactMe from './pages/ContactMe';
-import Projects from './pages/Projects';
+import ProjectsPage from './pages/Projects';
 import Navigation from "./Navigation";
 import Home from './pages/Home'
 import Header from './Header';
@@ -35,7 +35,7 @@ export default function PortfolioContainer() {
         if (currentPage === 'Projects') {
             console.log(currentPage);
 
-            return <Projects />
+            return <ProjectsPage />
         }
         console.log(currentPage);
         return <Home />;
@@ -48,7 +48,8 @@ export default function PortfolioContainer() {
     return (
         <>
             <Flex
-                w="100%">
+                w="100%"
+                h='100%'>
                 <Stack
                     w="100%"
                     align="start"
@@ -65,7 +66,6 @@ export default function PortfolioContainer() {
                     </Center>
                     {renderPage()}
                     <Footer />
-
                 </Stack>
             </Flex>
         </>

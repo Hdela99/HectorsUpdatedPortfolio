@@ -1,10 +1,9 @@
 import React from 'react';
-
-export default function Projects() {
+import Projects from '../Projects'
+export default function ProjectPage() {
     return (
         <main>
-            <h1>Projects</h1>
-            <p> Change this to utilize chakra UI components</p>
+            <Projects />
         </main>
     );
-};
+}; 

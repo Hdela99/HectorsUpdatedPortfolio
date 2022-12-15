@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectBox from './ProjectBox';
 import tOF from '../Images/techOverflow.PNG'
-import { Stack, Container, Center, Heading, HStack } from "@chakra-ui/react";
+import { Stack, Flex, Center, Heading, HStack } from "@chakra-ui/react";
 
 
 export default function Projects() {
@@ -16,7 +16,7 @@ export default function Projects() {
     ]
     return (
         <>
-            <Center pt='5vh'>
+            <Flex pt='5vh'>
                 <Stack textAlign='center'>
                     {projectArray.map(({ title, description, imageAlt, image, liveLink }, index) => (
                         <ProjectBox
@@ -28,7 +28,7 @@ export default function Projects() {
                             liveLink={liveLink} />
                     ))}
                 </Stack>
-            </Center>
+            </Flex>
         </>
 
     )

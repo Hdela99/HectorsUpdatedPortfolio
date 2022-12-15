@@ -21,11 +21,10 @@ export default function ProjectBox(projectInfo) {
         liveLink
     } = projectInfo
     return (
-        <Card key={index} size='sm'>
+        <Card key={index} w={['100%', '50%', '30%']}>
             <CardHeader>
                 <Heading size='sm'>{title}</Heading>
             </CardHeader>
-            <Text> Potato</Text>
 
             <Link
                 to={liveLink}>

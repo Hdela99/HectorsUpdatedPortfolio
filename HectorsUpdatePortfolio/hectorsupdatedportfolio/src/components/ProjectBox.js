@@ -8,8 +8,14 @@ import {
     Text,
     Flex,
     Image,
-    Link
+    Link,
+    Stack,
+    Box,
+    Wrap,
+    WrapItem
 } from '@chakra-ui/react'
+import { Icon } from '@chakra-ui/react'
+
 
 export default function ProjectBox(projectInfo) {
     const {
@@ -18,13 +24,16 @@ export default function ProjectBox(projectInfo) {
         imageAlt,
         title,
         description,
-        liveLink
+        liveLink,
+        skills
     } = projectInfo
     return (
-        <Card key={index} w={['100%', '50%', '30%']}>
-            <CardHeader>
-                <Heading size='sm'>{title}</Heading>
-            </CardHeader>
+        <Card
+            key={index}
+            direction={{ base: 'column', sm: 'row' }}
+            overfolow='hidden'
+            variant='outline'>
+
 
             <Link
                 to={liveLink}>
@@ -34,12 +43,35 @@ export default function ProjectBox(projectInfo) {
                     alt={imageAlt}
                     borderRadius='lg' />
             </Link>
-            <Divider />
-            <CardBody size='sm'>
-                <Text>
-                    {description}
-                </Text>
-            </CardBody>
+            <Stack
+                justify='start'>
+                <CardHeader>
+                    <Heading size='sm'>{title}</Heading>
+                </CardHeader>     <CardBody size='sm'>
+                    <Text>
+                        {description}
+                    </Text>
+                    <Divider />
+
+
+                </CardBody>
+                <Heading>Skils Used: </Heading>
+                <Wrap
+                >
+                    {skills.map(({ badge, title }, index) => (
+                        <Box
+                            key={index}
+                            className={index}
+                            size='sm'
+                        >
+                            <Text>{title}</Text>
+                            <Icon as={badge} />
+                        </Box>
+                    ))}
+                </Wrap>
+
+            </Stack>
+
         </Card>
     )
 }

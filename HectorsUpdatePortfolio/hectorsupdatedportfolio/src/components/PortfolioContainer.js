@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Stack, Flex, Center, Heading, HStack, Container } from "@chakra-ui/react";
+import { Stack, Flex, Center, Heading, HStack, Container, Spacer } from "@chakra-ui/react";
 import Resume from './pages/Resume';
 import AboutMe from './pages/AboutMe';
 import ContactMe from './pages/ContactMe';
@@ -60,6 +60,7 @@ export default function PortfolioContainer() {
                             background='#132C33'
                         >
                             <Header />
+                            <Spacer />
                             <Navigation handlePageChange={handlePageChange} currentPage={currentPage} />
 
                         </HStack>

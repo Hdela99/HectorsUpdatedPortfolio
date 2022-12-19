@@ -7,29 +7,22 @@ export default function Header() {
             justify='space-between'
             padding={'0.5rem'}
             textalign="center"
-            w="100%"        >
+            w={['10%', '25%', '45%']}        >
 
             <Text
                 align="left"
                 textColor="#D8E3E7"
-                fontSize="5x1"
+                fontSize={['0.5rem', '0.75rem', '1rem', '1.5rem', '1.75rem']}
                 fontWeight='extrabold'
             >
                 Hector  De La Cruz Sandoval
             </Text>
-            <HStack
-                justify='space-between'
-            >
-                <Center>
-                    <Stack>
-                        <Heading as="h1" size="3xl" textColor="white">
-                            Welcome to my portoflio site
-                        </Heading>
-                    </Stack>
 
-                </Center>
+            <Heading as="h1" fontSize={['0.75rem', '1rem', '1.5rem', '1.75rem']} textColor="white">
+                Welcome to my portoflio site
+            </Heading>
 
-            </HStack>
+
         </Flex>
 
 

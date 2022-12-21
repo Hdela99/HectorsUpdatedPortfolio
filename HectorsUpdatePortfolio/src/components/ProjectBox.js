@@ -36,7 +36,8 @@ export default function ProjectBox(projectInfo) {
 
 
             <Link
-                to={liveLink}>
+                as='a'
+                href={liveLink}>
                 <Image
                     size='sm'
                     src={image}
@@ -55,8 +56,11 @@ export default function ProjectBox(projectInfo) {
 
 
                 </CardBody>
-                <Heading>Skils Used: </Heading>
+                <Heading
+                    justify='start'
+                >Skils Used: </Heading>
                 <Wrap
+                    justify='space-evenly'
                 >
                     {skills.map(({ badge, title }, index) => (
                         <Box

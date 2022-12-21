@@ -13,31 +13,23 @@ export default function PortfolioContainer() {
     const [currentPage, setCurrentPage] = useState('Home');
 
     const handlePageChange = (page) => {
-        console.log(page);
         setCurrentPage(page);
     };
 
     const renderPage = () => {
-        console.log(currentPage);
-        console.log(typeof (currentPage))
         if (currentPage === 'Resume') {
-            console.log(currentPage);
             return <Resume />
         }
         if (currentPage === 'AboutMe') {
-            console.log(currentPage);
             return <AboutMe />
         }
         if (currentPage === 'ContactMe') {
-            console.log(currentPage);
             return <ContactMe />
         }
         if (currentPage === 'Projects') {
-            console.log(currentPage);
 
             return <ProjectsPage />
         }
-        console.log(currentPage);
         return <Home />;
 
     };

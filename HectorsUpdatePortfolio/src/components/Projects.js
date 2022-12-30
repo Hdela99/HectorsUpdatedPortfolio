@@ -56,6 +56,19 @@ export default function Projects() {
                     badge: FaNodeJs,
                     title: 'NodeJs'
                 }]
+        },
+        {
+            title: 'N/A',
+            description: 'Temporary description',
+            imageAlt: 'Javascript quiz',
+            image: 'n/a',
+            liveLink: 'https://google.com',
+            skills: [
+                {
+                    badge: SiApollographql,
+                    title: 'ApolloGraphQL'
+                }
+            ]
         }
     ]
     return (

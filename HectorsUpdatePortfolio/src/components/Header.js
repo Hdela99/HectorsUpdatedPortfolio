@@ -1,13 +1,13 @@
 import React from "react";
 import { Center, Flex, Stack, Text, Heading, HStack } from "@chakra-ui/react";
-import Navigation from '../components/Navigation'
 export default function Header() {
     return (
         <Flex
             justify='space-between'
             padding={'0.5rem'}
             textalign="center"
-            w={['10%', '25%', '45%']}        >
+            w={['10%', '25%', '45%']}
+            className='HeaderHolder'      >
 
             <Text
                 align="left"

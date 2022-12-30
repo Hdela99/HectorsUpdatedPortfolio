@@ -31,33 +31,41 @@ export default function ProjectBox(projectInfo) {
         <Card
             key={index}
             direction={{ base: 'column', sm: 'row' }}
-            overfolow='hidden'
-            variant='outline'>
+            variant='outline'
+            m='0'
+            p='0'
+            h='fit-content'
+            w='fit-content'
+
+        >
 
 
             <Link
                 as='a'
                 href={liveLink}>
                 <Image
-                    size='sm'
+                    height='50%'
+                    width='200%'
                     src={image}
                     alt={imageAlt}
                     borderRadius='lg' />
             </Link>
             <Stack
-                justify='start'>
-                <CardHeader>
-                    <Heading size='sm'>{title}</Heading>
-                </CardHeader>     <CardBody size='sm'>
-                    <Text>
-                        {description}
-                    </Text>
-                    <Divider />
-
-
-                </CardBody>
+                className='projectCard'
+                m='0'
+                p='0'
+                pl='10px'
+                boxSize='md'
+            >
+                <CardHeader mt='10px' p='0'>
+                    <Heading size='sm' m='0' p='0'>{title}</Heading>
+                </CardHeader>
+                <Text m='0' p='0'>
+                    {description}
+                </Text>
+                <Divider m='0' p='0' />
                 <Heading
-                    justify='start'
+                    m='0' p='0'
                 >Skils Used: </Heading>
                 <Wrap
                     justify='space-evenly'
@@ -66,10 +74,13 @@ export default function ProjectBox(projectInfo) {
                         <Box
                             key={index}
                             className={index}
-                            size='sm'
+                            w='20%'
+                            h='20%'
                         >
-                            <Text>{title}</Text>
-                            <Icon as={badge} />
+                            <Text
+                                fontSize='1.25rem'
+                            >{title}</Text>
+                            <Icon boxSize='2rem' as={badge} />
                         </Box>
                     ))}
                 </Wrap>

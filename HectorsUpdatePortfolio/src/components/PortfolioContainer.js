@@ -45,6 +45,7 @@ export default function PortfolioContainer() {
                 <Stack
                     w="100%"
                     align="start"
+                    h="100%"
                 >
                     <Center>
                         <HStack

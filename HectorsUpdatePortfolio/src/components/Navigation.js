@@ -15,7 +15,8 @@ function Navigation({ currentPage, handlePageChange }) {
                 minWidth='max-content'
                 alignItems="center"
                 gap='2'
-                w={[300, 400, 500, 600, 700, 800, 1000, 1100]}
+                w='75vw'
+                overflow-x='hidden'
             >
                 <Spacer />
                 <Tabs variant='solid-rounded'>

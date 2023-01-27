@@ -5,11 +5,12 @@ import MailTo from '../components/MailTo';
 export default function Footer() {
     return (
         <Flex
-            position='absolute'
-            bottom='0'
-            w='100%'
-            alignItems='center'
-            h='30%'
+            className='FooterBox'
+            // position='fixed'
+            // bottom='0'
+            // w='100%'
+            // alignItems='center'
+            h='fit-content'
             justify='center'
         >
             <Center

@@ -5,8 +5,7 @@ export default function Header() {
         <Flex
             justify='space-between'
             padding={'0.5rem'}
-            textalign="center"
-            w={['10%', '25%', '45%']}
+            w='100%'
             className='HeaderHolder'      >
 
             <Text
@@ -15,10 +14,10 @@ export default function Header() {
                 fontSize={['0.5rem', '0.75rem', '1rem', '1.5rem', '1.75rem']}
                 fontWeight='extrabold'
             >
-                Hector  De La Cruz Sandoval
+                Hector DLC
             </Text>
 
-            <Heading as="h1" fontSize={['0.75rem', '1rem', '1.5rem', '1.75rem']} textColor="white">
+            <Heading as="h4" textColor="white" w='fit-content' fontSize={['auto', '.5rem', '.75rem', '1rem', '1.25rem', '1.5rem']} >
                 Welcome to my portoflio site
             </Heading>
 

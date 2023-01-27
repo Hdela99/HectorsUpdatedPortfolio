@@ -1,10 +1,14 @@
 import React from 'react';
 import ProjectBox from './ProjectBox';
 import tOF from '../Images/techOverflow.PNG'
+import jate from '../Images/textEditor.png'
 import { Stack, Flex, Center, Heading, HStack } from "@chakra-ui/react";
+import Footer from '../components/Footer';
+
+
 
 import { FaReact, FaNodeJs, } from 'react-icons/fa'
-import { SiApollographql, SiMongodb, SiExpress, SiHeroku, SiJavascript, SiCss3, SiHtml5, SiChakraui } from 'react-icons/si'
+import { SiApollographql, SiMongodb, SiExpress, SiHeroku, SiJavascript, SiCss3, SiHtml5, SiChakraui, SiNodemon, SiNpm, SiWebpack, SiBabel, } from 'react-icons/si'
 
 
 export default function Projects() {
@@ -56,6 +60,47 @@ export default function Projects() {
                     badge: FaNodeJs,
                     title: 'NodeJs'
                 }]
+        },
+        {
+            title: 'JATE',
+            description: 'I created a mini text editor. It highlights in similar style to a text editor like visual studio. This is a Progressive Web App because I wanted to tinker with new things. This web app can be downloaded and used without internet successfully.',
+            imageAlt: 'Jate',
+            image: jate,
+            liveLink: 'https://obscure-refuge-11279.herokuapp.com/',
+            skills: [
+                {
+                    badge: SiExpress,
+                    title: 'ExpressJs'
+                },
+                {
+                    badge: SiJavascript,
+                    title: 'Javascript'
+                },
+                {
+                    badge: SiWebpack,
+                    title: 'WebPacks'
+                },
+                {
+                    badge: SiNpm,
+                    title: 'Npm'
+                },
+                {
+                    badge: SiHtml5,
+                    title: 'Html'
+                },
+                {
+                    badge: SiCss3,
+                    title: 'CSS'
+                },
+                {
+                    badge: SiNodemon,
+                    title: 'Nodemon'
+                },
+                {
+                    badge: SiBabel,
+                    title: 'Babel'
+                }
+            ]
         },
         {
             title: 'N/A',

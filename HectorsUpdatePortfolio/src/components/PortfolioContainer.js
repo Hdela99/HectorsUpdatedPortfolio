@@ -18,19 +18,39 @@ export default function PortfolioContainer() {
 
     const renderPage = () => {
         if (currentPage === 'Resume') {
-            return <Resume />
+            return (
+                <Stack>
+                    <Resume />
+                </Stack>
+            )
         }
         if (currentPage === 'AboutMe') {
-            return <AboutMe />
+            return (
+                <Stack>
+                    <AboutMe />
+                </Stack>
+            )
         }
         if (currentPage === 'ContactMe') {
-            return <ContactMe />
+            return (
+                <Stack>
+                    <ContactMe />
+                </Stack>
+            )
         }
         if (currentPage === 'Projects') {
 
-            return <ProjectsPage />
+            return (
+                <Stack>
+                    <ProjectsPage />
+                </Stack>
+            )
         }
-        return <Home />;
+        return (
+            <Stack>
+                <Home />
+            </Stack>
+        )
 
     };
 
@@ -40,6 +60,7 @@ export default function PortfolioContainer() {
     return (
         <>
             <Flex
+                className='portfolioContainer'
                 w="100%"
                 h='100%'>
                 <Stack
@@ -59,9 +80,9 @@ export default function PortfolioContainer() {
                         </HStack>
                     </Center>
                     {renderPage()}
-                    <Footer />
                 </Stack>
             </Flex>
+            <Footer />
         </>
     );
 };

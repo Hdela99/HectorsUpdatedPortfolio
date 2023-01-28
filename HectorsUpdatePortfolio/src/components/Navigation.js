@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Spacer, Tabs, Tab, TabList, Link } from "@chakra-ui/react";
+import { Flex, Spacer, Tabs, Tab, TabList, Link, Text, Heading } from "@chakra-ui/react";
 import Resume from './pages/Resume';
 import AboutMe from './pages/AboutMe';
 import ContactMe from './pages/ContactMe';
@@ -14,13 +14,26 @@ function Navigation({ currentPage, handlePageChange }) {
             <Flex
                 minWidth='max-content'
                 alignItems="center"
+                justify='space-between'
+                h='100%'
                 gap='2'
-                w='75vw'
+                w='100vw'
                 overflow-x='hidden'
             >
-                <Spacer />
+                <Heading
+                    align="left"
+                    textColor="#D8E3E7"
+                    fontSize={['0.5rem', '0.75rem', '1rem', '1.5rem', '1.75rem']}
+                    fontWeight='extrabold'
+                >
+                    Hector DLC
+                </Heading>
+
+
                 <Tabs variant='solid-rounded'>
-                    <TabList>
+                    <TabList
+
+                    >
                         <Tab
                             onClick={() => handlePageChange('Home')}
                             color='white'

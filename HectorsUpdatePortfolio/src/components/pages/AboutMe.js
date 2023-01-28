@@ -41,12 +41,6 @@ export default function AboutMe() {
                 </HStack>
                 <Divider orientation='horizontal' />
             </Stack>
-
-
-
-
-
-
         </Flex >
     );
 };

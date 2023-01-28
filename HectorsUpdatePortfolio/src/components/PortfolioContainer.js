@@ -33,7 +33,7 @@ export default function PortfolioContainer() {
         }
         if (currentPage === 'ContactMe') {
             return (
-                <Stack>
+                <Stack w='100%'>
                     <ContactMe />
                 </Stack>
             )
@@ -64,21 +64,21 @@ export default function PortfolioContainer() {
                 w="100%"
                 h='100%'>
                 <Stack
+                    className='portfolioContainerStack'
                     w="100%"
                     align="start"
                     h="100%"
                 >
-                    <Center>
-                        <HStack
-                            w='100%'
-                            background='#132C33'
-                        >
-                            <Header />
-                            <Spacer />
-                            <Navigation handlePageChange={handlePageChange} currentPage={currentPage} />
 
-                        </HStack>
-                    </Center>
+                    <HStack
+                        w='100%'
+                        h='15%'
+                        background='#132C33'
+                    >
+                        {/* <Header /> */}
+                        <Navigation handlePageChange={handlePageChange} currentPage={currentPage} />
+
+                    </HStack>
                     {renderPage()}
                 </Stack>
             </Flex>
